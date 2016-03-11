@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="lightgray">#736F6E</color>
+    <color name="lightgray02">#808080</color>
+    <color name="orrange">#FFA500</color>
+    <color name="pressed_color">#7FB447</color>
+    <color name="default_color">#00A8E5</color>
+</resources>
