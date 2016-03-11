@@ -29,8 +29,8 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        TextView tv=(TextView) v.findViewById(R.id.tv_current_month);
-        Log.e("gestureView",""+tv.getText());
+       /* TextView tv=(TextView) v.findViewById(R.id.tv_current_month);
+        Log.e("gestureView",""+tv.getText());*/
         return gestureDetector.onTouchEvent(event);
     }
 //    detect the motion of the event on the screen
