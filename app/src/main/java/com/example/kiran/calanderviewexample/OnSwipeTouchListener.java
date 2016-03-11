@@ -38,6 +38,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
     {
         public static final int SWIPE_DISANCE_THRESHOULD=100;
         public static final int SWIPE_VELOCITY_TRESHOULD=100;
+
 //down press event occures
         @Override
         public boolean onDown(MotionEvent e) {
