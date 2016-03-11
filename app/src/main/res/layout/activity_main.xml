@@ -8,18 +8,17 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.kiran.calanderviewexample.MainActivity">
-
-    <TextView
-        android:id="@+id/tv_print_selected_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-    <CalendarView
-        android:id="@+id/cal_date"
+<!--
+<fragment
+    android:id="@+id/fragment_custom_calender"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:name="com.example.kiran.calanderviewexample.fragment.FragmentCalender"
+    />
+-->
+    <FrameLayout
+        android:id="@+id/fragment_custom_calender"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        >
-
-    </CalendarView>
+        android:layout_height="match_parent">
+    </FrameLayout>
 </RelativeLayout>

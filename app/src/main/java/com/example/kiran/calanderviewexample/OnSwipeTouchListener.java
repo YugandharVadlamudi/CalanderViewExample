@@ -1,9 +1,13 @@
 package com.example.kiran.calanderviewexample;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by Kiran on 10-03-2016.
@@ -25,6 +29,8 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
+        TextView tv=(TextView) v.findViewById(R.id.tv_current_month);
+        Log.e("gestureView",""+tv.getText());
         return gestureDetector.onTouchEvent(event);
     }
 //    detect the motion of the event on the screen

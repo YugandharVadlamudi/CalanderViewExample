@@ -1,42 +1,25 @@
 package com.example.kiran.calanderviewexample;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.CalendarView;
-import android.widget.TextView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.text.DateFormatSymbols;
+import com.example.kiran.calanderviewexample.fragment.FragmentCalender;
+
 public class MainActivity extends AppCompatActivity {
-    CalendarView calendarView;
-    TextView tvdatePrint;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        calendarView=(CalendarView)findViewById(R.id.cal_date);
-        tvdatePrint=(TextView)findViewById(R.id.tv_print_selected_date);
-        Calendar c=Calendar.getInstance();
-        SimpleDateFormat df = new SimpleDateFormat("dd-MMMMMMM-yyyy");
-        String formattedDate = df.format(c.getTime());
-        tvdatePrint.setText(formattedDate.toString());
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
 
-                String date=""+String.valueOf(year)+"-"+getMonthForInt(month)+"-"+String.valueOf(dayOfMonth);
-                tvdatePrint.setText(date);
-            }
-        });
+        fragmentCalling();
     }
-    public String getMonthForInt(int num) {
-        String month = "wrong";
-        DateFormatSymbols dfs = new DateFormatSymbols();
-        String[] months = dfs.getMonths();
-        if (num >= 0 && num <= 11 ) {
-            month = months[num];
-        }
-        return month.substring(0,3);
+    private void fragmentCalling() {
+        FragmentManager fManger=getSupportFragmentManager();
+        FragmentTransaction fTransaction=fManger.beginTransaction();
+        fTransaction.replace(R.id.fragment_custom_calender,new FragmentCalender());
+        fTransaction.commit();
     }
+
 }
